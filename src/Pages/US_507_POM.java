@@ -7,6 +7,8 @@ import org.openqa.selenium.support.PageFactory;
 
 
     public class US_507_POM {
+        public WebElement logo;
+
         public US_507_POM() {
             PageFactory.initElements(BaseDriver.driver, this);
         }

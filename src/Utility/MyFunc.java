@@ -13,8 +13,14 @@ public class MyFunc {
         }
     }
 
-    public void scrollToElement(WebElement element) {
+    public static void  scrollToElement(WebElement element) {
         JavascriptExecutor js = (JavascriptExecutor) BaseDriver.driver;
         js.executeScript("arguments[0].scrollIntoView();", element);
+    }
+
+    public static void clickElement(WebElement element) {
+        JavascriptExecutor js = (JavascriptExecutor) BaseDriver.driver;
+        js.executeScript("arguments[0].click();", element);
+
     }
 }
