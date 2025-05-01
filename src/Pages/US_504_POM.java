@@ -21,5 +21,4 @@ public class US_504_POM {
     @FindBy(css = "[class='t-feed__link js-feed-post-link']")
     public List<WebElement>blogsTitle;
 
-
 }

@@ -3,7 +3,7 @@
 <suite name="All Test Suite">
     <test name="DropDownMenu">
         <classes>
-            <class name="Pages.US_501_POM" />
+            <class name="Project.US_501_DropdownMenu" />
         </classes>
 
     </test>

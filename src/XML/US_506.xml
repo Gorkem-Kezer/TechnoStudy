@@ -6,14 +6,14 @@
     <test name="socialMediaTest1">
         <parameter name="BrowserTipi" value="chrome"></parameter>
         <classes>
-            <class name="Project.US_505_SubmenuSocialMedia"></class>
+            <class name="Project.US_506_LogoToHomepage"></class>
         </classes>
     </test>
 
     <test name="socialMediaTest2">
         <parameter name="BrowserTipi" value="firefox"></parameter>
         <classes>
-            <class name="Project.US_505_SubmenuSocialMedia"></class>
+            <class name="Project.US_506_LogoToHomepage"></class>
         </classes>
     </test>
 </suite>

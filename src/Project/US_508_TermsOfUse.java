@@ -2,19 +2,14 @@ package Project;
 
 import Pages.US_503_508_POM;
 import Utility.BaseDriver;
-import org.apache.commons.io.FileUtils;
-import org.openqa.selenium.OutputType;
-import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.testng.Assert;
-import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
-import java.io.File;
 import java.io.IOException;
 
 
-public class US_508_TermsOfUse extends BaseDriver{
+public class US_508_TermsOfUse extends BaseDriver {
     @Test(groups = "Regression")
     public void test8() throws IOException {
         US_503_508_POM elements = new US_503_508_POM();
@@ -34,6 +29,5 @@ public class US_508_TermsOfUse extends BaseDriver{
         Assert.assertTrue(driver.getCurrentUrl().contains("TermsofUse"));
 
         TearDown();
-
-}
+    }
 }
