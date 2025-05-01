@@ -1,29 +1,37 @@
 package Project;
 
-import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.FindBy;
-import org.openqa.selenium.support.PageFactory;
+import Pages.US_501_POM;
+import Utility.BaseDriver;
+import org.testng.annotations.Test;
 
-import static Utility.BaseDriver.driver;
+public class US_501_DropdownMenu extends BaseDriver {
 
-public class US_501_DropdownMenu {
+    @Test
+    public void DropDownMenu(){
 
-    @FindBy(css = "[href='#submenu:programs']")
-    public WebElement programs;
-    @FindBy(xpath = "//*[text()='Software Development Engineer in Test']")
-    public WebElement SDET;
-    @FindBy(xpath = "(//*[text()='Data Science Bootcamp'])[1]")
-    public WebElement DBS;
-    @FindBy(xpath = "(//*[text()='Artificial Intelligence'])[1]")
-    public WebElement artificialIntelligence;
-    @FindBy(xpath = "(//*[text()='Android Developer Bootcamp'])[1]")
-    public WebElement ADB;
-    @FindBy(xpath = "//*[@class='t966__menu-list']/div[5]")
-    public WebElement mastersProgram;
+        driver.get("https://techno.study/");
+        US_501_POM elements=new US_501_POM();
 
-    public US_501_DropdownMenu() {
-        PageFactory.initElements(driver, this);
+        elements.programs.click();
+        elements.SDET.click();
+        driver.navigate().back();
+
+        elements.programs.click();
+        elements.DBS.click();
+        driver.navigate().back();
+
+        elements.programs.click();
+        elements.artificialIntelligence.click();
+        driver.navigate().back();
+
+        elements.programs.click();
+        elements.ADB.click();
+        driver.navigate().back();
+
+        elements.programs.click();
+        elements.mastersProgram.click();
+        driver.navigate().back();
+
+        TearDown();
     }
-
 }
-

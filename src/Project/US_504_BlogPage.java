@@ -2,7 +2,6 @@ package Project;
 
 import Pages.US_504_POM;
 import Utility.BaseDriver;
-import Utility.MyFunc;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
@@ -35,7 +34,6 @@ public class US_504_BlogPage extends BaseDriver {
                 }
             }
 
-            MyFunc.wait(1);
             List<WebElement> elements = driver.findElements(By.xpath("//h1[@class='t986__title t-title t-title_lg']//strong"));
             List<WebElement> elements2 = driver.findElements(By.xpath("//h1[@class='t001__title t-title t-title_xl']//strong"));
 
