@@ -1,17 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
-
 <suite name="mySuit">
     <test name="test1">
         <classes>
             <class name="Project.US_503_Booking">
             </class>
-
             <groups>
                 <run>
                     <include name="Smoke Test"></include>
                 </run>
             </groups>
-
         </classes>
     </test>
 </suite>

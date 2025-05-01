@@ -30,8 +30,8 @@ public class US_508_TermsOfUse extends BaseDriver{
         elements.PromoCode.sendKeys("abc1234");
         wait.until(ExpectedConditions.elementToBeClickable(elements.TermsofUse2)).click();
 
-        wait.until(ExpectedConditions.urlContains("terms"));
-        Assert.assertTrue(driver.getCurrentUrl().contains("terms"));
+        wait.until(ExpectedConditions.urlContains("TermsofUse"));
+        Assert.assertTrue(driver.getCurrentUrl().contains("TermsofUse"));
 
         TearDown();
 

@@ -13,7 +13,7 @@ public class US_503_508_POM {
 
     @FindBy(xpath = "//a[@class='tn-atom js-click-zero-stat']")
     public WebElement ApplyNow;
-
+    
     @FindBy(xpath = "//input[@aria-label='name']")
     public WebElement Fullname;
 

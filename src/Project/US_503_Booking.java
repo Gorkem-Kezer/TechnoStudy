@@ -26,7 +26,7 @@ public class US_503_Booking extends BaseDriver{
         wait.until(ExpectedConditions.elementToBeClickable(elements.Button)).click();
 
         wait.until(ExpectedConditions.visibilityOf(elements.thankYouMessage));
-        Assert.assertTrue(elements.thankYouMessage.getText().contains("Thank"));
+        Assert.assertTrue(elements.thankYouMessage.getText().contains("Thank you"));
 
         TearDown();
     }
