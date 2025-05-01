@@ -27,31 +27,31 @@ public class US_504_BlogPage extends BaseDriver {
                 "Differences", "Test Plan", "Opportunities", "Survive", "Significance", "Test Case", "Tackling"};
         for (int i = 0; i < 17; i++) {
             String title = pom.blogsTitle.get(i).getText();
-                actions.click(pom.blogPosts.get(i)).build().perform();
-                for (String tab : driver.getWindowHandles()) {
-                    if (!tab.equals(originalTab)) {
-                        driver.switchTo().window(tab);
-                        break;
-                    }
+            actions.click(pom.blogPosts.get(i)).build().perform();
+            for (String tab : driver.getWindowHandles()) {
+                if (!tab.equals(originalTab)) {
+                    driver.switchTo().window(tab);
+                    break;
                 }
+            }
 
-                MyFunc.wait(1);
-                List<WebElement> elements = driver.findElements(By.xpath("//h1[@class='t986__title t-title t-title_lg']//strong"));
-                List<WebElement> elements2 = driver.findElements(By.xpath("//h1[@class='t001__title t-title t-title_xl']//strong"));
+            MyFunc.wait(1);
+            List<WebElement> elements = driver.findElements(By.xpath("//h1[@class='t986__title t-title t-title_lg']//strong"));
+            List<WebElement> elements2 = driver.findElements(By.xpath("//h1[@class='t001__title t-title t-title_xl']//strong"));
 
-                if (i == 8) {
-                    Assert.assertTrue(elements2.size() > 0, "Başlık sayfada bulunamadı!");
-                    Assert.assertTrue(title.contains(blogsText[i]) && elements2.get(0).getText().contains(blogsText[i]), "Başlık eşleşmiyor!");
+            if (i == 8) {
+                Assert.assertTrue(elements2.size() > 0, "Başlık sayfada bulunamadı!");
+                Assert.assertTrue(title.contains(blogsText[i]) && elements2.get(0).getText().contains(blogsText[i]), "Başlık eşleşmiyor!");
 
-                } else {
-                    Assert.assertTrue(elements.size() > 0, "Başlık sayfada bulunamadı!");
-                    Assert.assertTrue(title.contains(blogsText[i]) && elements.get(0).getText().contains(blogsText[i]), "Başlık eşleşmiyor!");
-
-                }
-                driver.navigate().back();
-                wait.until(ExpectedConditions.elementToBeClickable(pom.blogs));
+            } else {
+                Assert.assertTrue(elements.size() > 0, "Başlık sayfada bulunamadı!");
+                Assert.assertTrue(title.contains(blogsText[i]) && elements.get(0).getText().contains(blogsText[i]), "Başlık eşleşmiyor!");
 
             }
+            driver.navigate().back();
+            wait.until(ExpectedConditions.elementToBeClickable(pom.blogs));
+
         }
     }
+}
 

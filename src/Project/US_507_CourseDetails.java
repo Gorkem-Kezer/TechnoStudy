@@ -10,14 +10,11 @@ import org.testng.annotations.Test;
 public class US_507_CourseDetails extends BaseDriver {
     @Test
     public void courseDetailsButtonNavigatesCorrectly() {
-        driver.get("https://techno.study/");
 
+        driver.get("https://techno.study/");
         US_507_POM pom = new US_507_POM();
         wait.until(ExpectedConditions.elementToBeClickable(pom.courseDetailsButton));
-
         pom.courseDetailsButton.click();
-        MyFunc.wait(2);  // Sayfanın yüklenmesini beklemek için
-
         String currentUrl = driver.getCurrentUrl();
         Assert.assertTrue(currentUrl.contains("course-details"), "Course Details sayfasına yönlenilmedi!");
     }

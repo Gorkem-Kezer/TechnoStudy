@@ -1,7 +1,6 @@
 package Project;
 
 import Pages.US_507_POM;
-import Utility.BaseDriver;
 import Utility.BaseDriverParameter;
 import Utility.MyFunc;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -14,13 +13,9 @@ public class US_506_LogoToHomepage extends BaseDriverParameter {
     public void logoClickNavigatesToHomepage() {
 
         driver.get("https://techno.study/");
-
         US_507_POM pom = new US_507_POM();
         wait.until(ExpectedConditions.elementToBeClickable(pom.logo));
-
         pom.logo.click();
-        MyFunc.wait(2);  // Sayfanın yüklenmesini beklemek için
-
         String currentUrl = driver.getCurrentUrl();
         Assert.assertEquals(currentUrl, "https://techno.study/", "Logo tıklanınca ana sayfaya dönülmedi!");
     }
