@@ -16,7 +16,6 @@ public class US_505_SubmenuSocialMedia extends BaseDriverParameter {
 
     @Test(groups = {"smoke "})
     public void socialMedia() {
-
         US_505_POM elements = new US_505_POM(driver);
 
         driver.get("https://techno.study/");
